@@ -1,9 +1,20 @@
 package com.example.testapplication
 
 fun main() {
-    helloWorld()
+    /*helloWorld()
 
-    println(add(4, 5))
+    println(add(4, 5))*/
+
+    // 3. String Template
+
+    val name = "dabin"
+    val lastName = "Choi"
+    println("my name is $name")
+    println("my name is ${name + lastName}, I'm 22")
+
+    println("is this true? ${1==0}")
+    println("this is 2\$a") // $자체를 String 으로 print 하고 싶을 때
+
 }
 
 // 1. 함수
@@ -28,8 +39,8 @@ fun hi() {
 
     b = 100
 
-    val c = 100 // Int 적지 않아도 알아서 할당해줌
-    var d = 100 // Int 적지 않아도 알아서 할당해줌
+    val c = 100 // Int 적지 않아도 알아서 할당
+    var d = 100 // Int 적지 않아도 알아서 할당
 
-    var name = "dabin" // String 적지 않아도 알아서 할당해줌
+    var name = "dabin" // String 적지 않아도 알아서 할당
 }
