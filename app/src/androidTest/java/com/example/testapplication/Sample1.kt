@@ -96,3 +96,24 @@ fun checkNum(score: Int) {
 // Kotlin의 모든 함수는 Expression
 // 아무것도 return하지 않아도 :Unit 을 return하기 때문에!
 // Java 에서 void들어간 것은 Statement
+
+
+// 7. Array and List
+// Array는 기본적으로 정해진 size가 있음
+// List 1. List(수정X Read Only), 2. MutableList(수정 가능)
+
+fun array() {
+    val array = arrayOf(1, 2, 3)
+    val list = listOf(1, 2, 3)
+
+    val array2 = arrayOf(1, "d", 3.4f)
+    val list2 = listOf(1, "d", 11L)
+
+    array[0] = 3 //가능
+    // list[0] = 2 불가능
+    var result = list.get(0)
+
+    var arrayList = arrayListOf<Int>() // val을 써도 상관X
+    arrayList.add(10)
+    arrayList.add(20)
+}
