@@ -65,17 +65,17 @@ fun maxBy(a: Int, b: Int): Int {
     }
 }
 
-fun maxBy2(a : Int, b : Int) = if(a > b) a else b
+fun maxBy2(a : Int, b : Int) = if(a > b) a else b // Expression
 
 fun checkNum(score: Int) {
-    when (score) {
+    when (score) { // Statement
         0 -> println("this is 0")
         1 -> println("this is 1")
         2, 3 -> println("this is 2 or 3")
         //else -> println("I don't know") 없어도 됨
     }
 
-    var b = when (score) {
+    var b = when (score) { // Expression
         1 -> 1
         2 -> 2
         else -> 3 // 이렇게 쓸 경우 else 를 항상 써야 함
@@ -89,3 +89,10 @@ fun checkNum(score: Int) {
         else -> println("okay") // else 는 없어도 됨
     }
 }
+
+// 6. Expression vs Statement
+// 뭔가 값을 만들면 Expression
+// Statement는 ~~이렇게 해 같은 명령을 지시하는 것
+// Kotlin의 모든 함수는 Expression
+// 아무것도 return하지 않아도 :Unit 을 return하기 때문에!
+// Java 에서 void들어간 것은 Statement
