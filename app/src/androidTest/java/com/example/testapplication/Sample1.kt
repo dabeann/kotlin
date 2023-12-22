@@ -1,5 +1,8 @@
 package com.example.testapplication
 
+import java.lang.IllegalArgumentException
+import java.util.Locale
+
 fun main() {
     /*helloWorld()
 
@@ -28,6 +31,8 @@ fun main() {
     checkNum(1)
 
     forAndWhile()
+
+    nullCheck()
 }
 
 // 1. 함수
@@ -45,10 +50,10 @@ fun add(a: Int, b: Int): Int { // : 뒤가 return type
 // var = variable 변할 수 있는 값
 
 fun hi() {
-    val a : Int = 10
-    var b : Int = 9
+    val a: Int = 10
+    var b: Int = 9
 
-    var e : String // 그냥 선언만 할 때에는 String 이런 type 선언을 해 주어야 함
+    var e: String // 그냥 선언만 할 때에는 String 이런 type 선언을 해 주어야 함
 
     b = 100
 
@@ -67,7 +72,7 @@ fun maxBy(a: Int, b: Int): Int {
     }
 }
 
-fun maxBy2(a : Int, b : Int) = if(a > b) a else b // Expression
+fun maxBy2(a: Int, b: Int) = if(a > b) a else b // Expression
 
 fun checkNum(score: Int) {
     when (score) { // Statement
@@ -154,5 +159,42 @@ fun forAndWhile() {
     while (index < 10) {
         println("current index : ${index}")
         index++
+    }
+}
+
+// 9. Nullable & NonNull
+
+fun nullCheck() {
+    // NPE : NULL Pointer Exception
+
+    var name: String = "dabin"
+
+    var nullName: String? = null // 물음표 넣으면 Nullable 됨
+
+    var nameInUpperCase = name.uppercase()
+
+    var nullNameInUpperCase = nullName?.uppercase() // null이 아니면 uppercase하고 null이면 null 반환
+
+    // ?:
+
+    val lastName: String? = null
+
+    val fullName = name + " " + (lastName ?: "NO lastName")
+
+    var mLastName = lastName ?: throw IllegalArgumentException("No last Name")
+
+    println(fullName)
+}
+
+// !!
+// 확실하게 null이 아닌 이상 지양해라
+
+fun ignoreNulls(str: String?) {
+    val mNotNull: String = str!! // 이거 절대로 null일리 없으니 null 아니라고 생각해라
+    val upper = mNotNull.uppercase()
+
+    val email : String? = "dabinXXXX@nana.vom"
+    email?.let { // email이 null이 아니면 이걸 해라
+        println("my email is ${email}")
     }
 }
