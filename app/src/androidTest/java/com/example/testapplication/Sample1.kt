@@ -15,6 +15,15 @@ fun main() {
     println("is this true? ${1==0}")
     println("this is 2\$a") // $자체를 String 으로 print 하고 싶을 때
 
+    // 4. 주석
+    // 한 줄 주석
+    /*
+    * 여러 줄 주석
+    * */
+    // control + /
+    /*
+     control + shift + /
+     */
 }
 
 // 1. 함수
