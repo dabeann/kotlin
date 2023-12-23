@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.mentaltest.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,12 +25,25 @@ class MainFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navController = Navigation.findNavController(view)
+
+        val btnNext = view.findViewById<ImageView>(R.id.btn_next)
+        btnNext.setOnClickListener {
+            navController.navigate(R.id.action_mainFragment_to_questionFragment)
+        } // 버튼 누르면 다음 페이지로 이동
     }
 
     override fun onCreateView(
