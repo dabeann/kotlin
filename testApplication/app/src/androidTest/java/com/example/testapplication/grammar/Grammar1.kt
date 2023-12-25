@@ -118,9 +118,18 @@ fun main() {
         nameNull2 = nameNull
     }
 
-    nameNull2 = nameNull!! // 개발자가 임의로 null이 아님을 보증했으므로 안좋음
+    // nameNull2 = nameNull!! // 개발자가 임의로 null이 아님을 보증했으므로 안좋음
 
     nameNull?.let {
         nameNull2 = nameNull
     }
+
+    // fun
+    println(sum(10, 20))
+
+}
+
+// fun
+fun sum(a: Int, b: Int): Int {
+    return a + b
 }
