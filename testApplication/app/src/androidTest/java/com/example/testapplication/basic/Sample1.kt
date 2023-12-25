@@ -1,7 +1,6 @@
-package com.example.testapplication
+package com.example.testapplication.basic
 
 import java.lang.IllegalArgumentException
-import java.util.Locale
 
 fun main() {
     /*helloWorld()

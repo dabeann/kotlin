@@ -1,4 +1,4 @@
-package com.example.testapplication
+package com.example.testapplication.basic
 
 open class Human (val name: String = "Anonymous") {
 
