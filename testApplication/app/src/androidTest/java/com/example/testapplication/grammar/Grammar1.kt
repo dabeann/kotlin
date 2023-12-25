@@ -107,4 +107,20 @@ fun main() {
     } catch (e: Exception) {
         println(e.message)
     }
+
+    // Null Safety
+    var nameNull: String? = null
+    nameNull = "dabin"
+    nameNull = null
+    var nameNull2: String = " "
+
+    if (nameNull != null) {
+        nameNull2 = nameNull
+    }
+
+    nameNull2 = nameNull!! // 개발자가 임의로 null이 아님을 보증했으므로 안좋음
+
+    nameNull?.let {
+        nameNull2 = nameNull
+    }
 }
