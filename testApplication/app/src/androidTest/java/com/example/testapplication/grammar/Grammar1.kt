@@ -95,4 +95,9 @@ fun main() {
     // mutable: 변경 가능
     items2.add(6)
     items2.remove(3)
+
+    // Array
+    val itemsArray = arrayOf(1, 2, 3)
+    itemsArray[0] = 10
+    // 배열은 실질적으로 잘 쓰지 않기에 웬만하면 List를 사용
 }
