@@ -2,6 +2,7 @@ package com.example.testapplication.grammar
 
 import java.lang.Integer.max
 import kotlin.jvm.internal.Intrinsics.Kotlin
+import kotlin.random.Random
 
 // top level val const
 const val number = 20
@@ -34,15 +35,19 @@ fun main() {
 
     // String
     var stringName = "hello"
-    print(stringName.uppercase())
-    print(stringName.lowercase())
-    print(stringName[0]) // 특정 번째 글자를 취할 때 배열처럼 접근 가능
-    print("제 이름은 ${stringName}입니다.")
-    print("제 이름은 ${stringName + 10}입니다.")
+    println(stringName.uppercase())
+    println(stringName.lowercase())
+    println(stringName[0]) // 특정 번째 글자를 취할 때 배열처럼 접근 가능
+    println("제 이름은 ${stringName}입니다.")
+    println("제 이름은 ${stringName + 10}입니다.")
 
     // max & min
     var minNum = 10
     var maxNum = 20
-    print(max(minNum, maxNum))
-    print(Math.max(minNum, maxNum)) // 이것도 동작하는데 JAVA로 짜져 있어서 성능 좀 더 안좋음
+    println(max(minNum, maxNum))
+    println(Math.max(minNum, maxNum)) // 이것도 동작하는데 JAVA로 짜져 있어서 성능 좀 더 안좋음
+
+    // random
+    val randomNumber = Random.nextInt(0, 100) // 0부터 99까지
+    println(randomNumber)
 }
