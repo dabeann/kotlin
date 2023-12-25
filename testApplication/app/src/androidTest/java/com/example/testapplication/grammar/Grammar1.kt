@@ -19,4 +19,13 @@ fun main() {
     val num = 20
     // num = 30 이렇게 재대입 불가능
     // JAVA의 Final과 동일하다고 보면 된다.
+
+    // type casting
+    var before = 10 // Int
+    var after = 20L // Long
+    after = before.toLong()
+    before = after.toInt()
+
+    var stringNum = "10"
+    before = stringNum.toInt()
 }
