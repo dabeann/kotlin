@@ -28,4 +28,12 @@ fun main() {
 
     var stringNum = "10"
     before = stringNum.toInt()
+
+    // String
+    var stringName = "hello"
+    print(stringName.uppercase())
+    print(stringName.lowercase())
+    print(stringName[0]) // 특정 번째 글자를 취할 때 배열처럼 접근 가능
+    print("제 이름은 ${stringName}입니다.")
+    print("제 이름은 ${stringName + 10}입니다.")
 }
