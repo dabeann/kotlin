@@ -2,7 +2,6 @@ package com.example.testapplication.grammar
 
 import java.lang.Integer.max
 import java.util.Scanner
-import kotlin.jvm.internal.Intrinsics.Kotlin
 import kotlin.random.Random
 
 // top level val const
@@ -88,4 +87,12 @@ fun main() {
     }
     // 이 구문이 훨씬 불편함. 따라서 위의 forEach를 사용하자.
     // while문은 JAVA와 동일
+
+    // List
+    // val items = listOf(1, 2, 3, 4, 5)
+    // 변경이 안되는 list
+    val items2 = mutableListOf(1, 2, 3, 4, 5)
+    // mutable: 변경 가능
+    items2.add(6)
+    items2.remove(3)
 }
