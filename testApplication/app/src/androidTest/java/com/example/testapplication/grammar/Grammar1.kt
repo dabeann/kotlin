@@ -1,5 +1,8 @@
 package com.example.testapplication.grammar
 
+import java.lang.Integer.max
+import kotlin.jvm.internal.Intrinsics.Kotlin
+
 // top level val const
 const val number = 20
 // 이 값은 main보다 우선해서 compile이 됨
@@ -36,4 +39,10 @@ fun main() {
     print(stringName[0]) // 특정 번째 글자를 취할 때 배열처럼 접근 가능
     print("제 이름은 ${stringName}입니다.")
     print("제 이름은 ${stringName + 10}입니다.")
+
+    // max & min
+    var minNum = 10
+    var maxNum = 20
+    print(max(minNum, maxNum))
+    print(Math.max(minNum, maxNum)) // 이것도 동작하는데 JAVA로 짜져 있어서 성능 좀 더 안좋음
 }
