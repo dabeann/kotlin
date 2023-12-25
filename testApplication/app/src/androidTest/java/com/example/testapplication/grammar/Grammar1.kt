@@ -1,5 +1,9 @@
 package com.example.testapplication.grammar
 
+// top level val const
+const val number = 20
+// 이 값은 main보다 우선해서 compile이 됨
+
 fun main() {
     // print
     print("Hello World")
