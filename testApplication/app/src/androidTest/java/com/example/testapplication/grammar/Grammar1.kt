@@ -100,4 +100,11 @@ fun main() {
     val itemsArray = arrayOf(1, 2, 3)
     itemsArray[0] = 10
     // 배열은 실질적으로 잘 쓰지 않기에 웬만하면 List를 사용
+
+    // 예외 처리
+    try {
+        val item = items[10]
+    } catch (e: Exception) {
+        println(e.message)
+    }
 }
