@@ -57,5 +57,23 @@ fun main() {
     reader.nextInt()
     reader.next()
 
+    // 조건문
+    var conditionVar = 5
+    var result = when {
+        conditionVar > 10 -> {
+            "10보다 크다"
+        }
+        conditionVar > 5 -> {
+            "5보다 크다"
+        }
+        else -> {
+            "else"
+        }
+    }
+    // if문은 when문으로 그대로 치환 가능
 
+    println(result)
+
+    // 3항 연산
+    val result2 = if (conditionVar > 10) true else false
 }
