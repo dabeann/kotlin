@@ -76,4 +76,16 @@ fun main() {
 
     // 3항 연산
     val result2 = if (conditionVar > 10) true else false
+
+    // 반복문
+    val items = listOf(1, 2, 3, 4, 5)
+    items.forEach { item ->
+        println(item)
+    }
+    // for (int i = 0; i < items.length; i++)
+    for (j in 0..(items.size-1)) {
+        println(items[j])
+    }
+    // 이 구문이 훨씬 불편함. 따라서 위의 forEach를 사용하자.
+    // while문은 JAVA와 동일
 }
