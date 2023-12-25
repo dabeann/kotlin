@@ -1,6 +1,7 @@
 package com.example.testapplication.grammar
 
 import java.lang.Integer.max
+import java.util.Scanner
 import kotlin.jvm.internal.Intrinsics.Kotlin
 import kotlin.random.Random
 
@@ -50,4 +51,11 @@ fun main() {
     // random
     val randomNumber = Random.nextInt(0, 100) // 0부터 99까지
     println(randomNumber)
+
+    // 키보드 입력
+    val reader = Scanner(System.`in`) // in은 kotlin에서 사용할 수 없는 키워드라서 ``로 감싸준다.
+    reader.nextInt()
+    reader.next()
+
+
 }
