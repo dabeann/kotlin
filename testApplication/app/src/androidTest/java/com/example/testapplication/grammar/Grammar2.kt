@@ -16,6 +16,11 @@ fun main() {
     val box = Box(10)
     val box2 = Box("asdf")
     println(box.value)
+
+    // callback
+    myFunc(10) {
+        println("함수 호출")
+    }
 }
 
 // 상속
@@ -52,3 +57,10 @@ interface Drawable {
 
 // generic
 class Box<T>(var value: T)
+
+// callback
+fun myFunc(a: Int, callBack: () -> Unit= {}){
+    println("함수 시작")
+    callBack()
+    println("함수 끝")
+}
