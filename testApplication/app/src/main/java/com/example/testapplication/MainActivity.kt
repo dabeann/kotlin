@@ -4,11 +4,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // coroutine
+        lifecycleScope.launch {
+            myFunc(10){
+
+            }
+        }
+
 
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener(object : View.OnClickListener {
@@ -25,4 +35,11 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+}
+
+// coroutine
+suspend fun myFunc(a: Int, callBack: () -> Unit= {}){
+    println("함수 시작")
+    callBack()
+    println("함수 끝")
 }
