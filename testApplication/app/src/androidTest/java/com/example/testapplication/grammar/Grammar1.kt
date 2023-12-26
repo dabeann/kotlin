@@ -127,9 +127,19 @@ fun main() {
     // fun
     println(sum(10, 20))
     println(sum(b = 10, a = 20))
+
+    // class
+    val john = Person("John", 20)
+    println(john.name)
+    println(john.age)
+    john.age = 23
 }
 
 // fun
 fun sum(a: Int, b: Int, c: Int = 0) = a + b + c
 // return type 생략 가능
 // 메소드 오버로드는 메소드를 여러 개 만드는 게 아니라 파라미터 조절을 통해 디폴트 값을 적당히 넣어서 함
+
+
+// class
+class Person(val name: String, var age: Int)
