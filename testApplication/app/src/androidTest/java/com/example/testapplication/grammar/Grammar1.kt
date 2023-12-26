@@ -133,6 +133,12 @@ fun main() {
     println(john.name)
     println(john.age)
     john.age = 23
+
+    val john2 = Person("John", 20)
+    println(john == john2) // false 출력
+    // Person이 data class라면 john == john2 가 true이다.
+
+    john.hobby = "야구"
 }
 
 // fun
@@ -142,4 +148,12 @@ fun sum(a: Int, b: Int, c: Int = 0) = a + b + c
 
 
 // class
-class Person(val name: String, var age: Int)
+class Person(val name: String, var age: Int){ // val이나 var 앞에 private 붙이면 접근 불가능
+    init {
+        println("init")
+    }
+    var hobby = "축구"
+    fun some() {
+        hobby = "농구"
+    }
+}
