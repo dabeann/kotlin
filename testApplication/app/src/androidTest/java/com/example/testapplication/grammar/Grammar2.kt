@@ -8,6 +8,14 @@ fun main() {
     if (dog is Dog) {
         println("멍멍이")
     }
+
+    // 강제 타입 변환 as
+    // cat as Dog
+
+    // generic
+    val box = Box(10)
+    val box2 = Box("asdf")
+    println(box.value)
 }
 
 // 상속
@@ -41,3 +49,6 @@ class Cat : Animal() {
 interface Drawable {
     fun draw()
 }
+
+// generic
+class Box<T>(var value: T)
