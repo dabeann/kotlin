@@ -138,7 +138,6 @@ fun main() {
     println(john == john2) // false 출력
     // Person이 data class라면 john == john2 가 true이다.
 
-    john.hobby = "야구"
 }
 
 // fun
@@ -153,6 +152,8 @@ class Person(val name: String, var age: Int){ // val이나 var 앞에 private �
         println("init")
     }
     var hobby = "축구"
+        private set // 외부에서 수정 불가능
+        get() = "취미 : $field"
     fun some() {
         hobby = "농구"
     }
