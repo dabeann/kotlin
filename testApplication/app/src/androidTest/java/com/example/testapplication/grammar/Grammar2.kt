@@ -1,7 +1,13 @@
 package com.example.testapplication.grammar
 
 fun main() {
+    // type check is
+    val dog: Animal = Dog()
+    val cat = Cat()
 
+    if (dog is Dog) {
+        println("멍멍이")
+    }
 }
 
 // 상속
